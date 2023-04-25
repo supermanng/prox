@@ -1,0 +1,29 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "scm.etechnosoft.org",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/scm/{everything}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "opm.etechnosoft.org",
+          "Port": "443"
+        }
+      ],
+      "UpstreamPathTemplate": "/opm/{everything}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7118"
+  }
+}
