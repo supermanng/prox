@@ -5,25 +5,15 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "scm.etechnosoft.org",
-          "Port": "443"
+          "Host": "ho-bmststapp.nigeria.firstbank.local",
+          "Port": "8080"
         }
       ],
-      "UpstreamPathTemplate": "/scm/{everything}"
-    },
-    {
-      "DownstreamPathTemplate": "/api/{everything}",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "opm.etechnosoft.org",
-          "Port": "443"
-        }
-      ],
-      "UpstreamPathTemplate": "/opm/{everything}"
+      "UpstreamPathTemplate": "/bms/{everything}",
+      "DangerousAcceptAnyServerCertificateValidator": true
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7118"
+    "BaseUrl": "https://bmspproxy.azurewebsites.net"
   }
 }
